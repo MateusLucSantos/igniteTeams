@@ -1,16 +1,22 @@
-import { Header } from "@components/Header";
+import { useRoute } from "@react-navigation/native";
+
+import { Alert, FlatList, TextInput } from "react-native";
+
+import { useEffect, useRef, useState } from "react";
+
 import { Container, Form, HeaderList, NumberOfPlayers } from "./styles";
+
+import { Header } from "@components/Header";
 import { Highlight } from "@components/Highlight";
 import { ButtonIcon } from "@components/ButtonIcon";
-import { Input } from "@components/Input";
-import { Filter } from "@components/Filter";
-import { Alert, FlatList, TextInput } from "react-native";
-import { useEffect, useRef, useState } from "react";
 import { PlayerCard } from "@components/PlayerCard";
 import { ListEmpty } from "@components/ListEmpty";
+import { Input } from "@components/Input";
+import { Filter } from "@components/Filter";
 import { Button } from "@components/Button";
-import { useRoute } from "@react-navigation/native";
+
 import { AppError } from "@utils/AppError";
+
 import { playerAddByGroup } from "@storage/player/playerAddByGroup";
 import { playerGetByGroupAndTeam } from "@storage/player/playerGetByGroupAndTeam";
 import { PlayerStorageDTO } from "@storage/player/PlayerStorageDTO";
